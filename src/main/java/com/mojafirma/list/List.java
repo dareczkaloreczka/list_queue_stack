@@ -46,9 +46,12 @@ public class List {
                 if (temp.getPrev() != null) {
                     temp.getNext().setPrev(temp.getPrev());
                 }
+                } else {
+                last = temp.getPrev();
+                last.setNext(null);
+            }
             }
         }
-    }
 
     public void printList() {
         ListElement temp = first;
